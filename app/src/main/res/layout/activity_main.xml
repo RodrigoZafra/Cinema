@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="i"
+    android:background="#202732"
     tools:context=".MainActivity">
 
     <ImageView
@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/boleto" />
+        app:srcCompat="@drawable/boleto_bueno" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
@@ -26,6 +26,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/teal_700"
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
@@ -40,6 +41,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/teal_700"
         android:ems="10"
         android:hint="Contraseña"
         android:inputType="textPassword"
@@ -55,6 +57,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:text="Acceder"
+        android:background="@drawable/button_style"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
@@ -67,6 +70,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:text="Registrarse"
+        android:background="@drawable/button_style_border"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
