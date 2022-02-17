@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1018940898446",
+    "project_id": "fir-cinema-ee0cb",
+    "storage_bucket": "fir-cinema-ee0cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1018940898446:android:9f6f08fea6ee6257265ddf",
+        "android_client_info": {
+          "package_name": "com.rodrigo.cinema"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1018940898446-3i8lt728pkmffv9hdaqjsf68uutuosvp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXuuoVj2ymW0g7mPfn6KfSp3Zh9hXKzUs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1018940898446-3i8lt728pkmffv9hdaqjsf68uutuosvp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
