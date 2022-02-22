@@ -7,10 +7,12 @@
         <entry key="..\:/Cinema/app/src/main/res/drawable/button_style_border.xml" value="0.1775" />
         <entry key="..\:/Cinema/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Rodrigo y Mario/Cinema/app/src/main/res/layout/activity_login.xml" value="0.1" />
-        <entry key="..\:/Rodrigo y Mario/Cinema/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Rodrigo y Mario/Cinema/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Rodrigo y Mario/Cinema/app/src/main/res/layout/activity_signup.xml" value="0.36666666666666664" />
         <entry key="..\:/Rodrigo y Mario/Cinema/app/src/main/res/layout/cartelera.xml" value="0.36666666666666664" />
+        <entry key="..\:/Rodrigo y Mario/Cinema/app/src/main/res/layout/settings_activity.xml" value="0.36666666666666664" />
         <entry key="..\:/Rodrigo y Mario/Cinema/app/src/main/res/menu/top_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Rodrigo y Mario/Cinema/app/src/main/res/xml/root_preferences.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

@@ -1,0 +1,34 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+
+    <string-array name="entradas_sexo">
+        <item>Hombre</item>
+        <item>Mujer</item>
+        <item>Otros</item>
+    </string-array>
+    <string-array name="valores_sexo">
+        <item>H</item>
+        <item>M</item>
+        <item>O</item>
+    </string-array>
+
+    <string-array name="entradas_aficiones">
+        <item>Cine</item>
+        <item>Musica</item>
+        <item>Lectura</item>
+    </string-array>
+    <string-array name="valores_aficiones">
+        <item>C</item>
+        <item>M</item>
+        <item>L</item>
+    </string-array>
+</resources>

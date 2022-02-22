@@ -13,11 +13,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.rodrigo.cinema.Adapter.Peliculas;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CarteleraAdapter extends RecyclerView.Adapter<CarteleraAdapter.ViewHolder> {
 
-    private List<Peliculas> peliculas;
+    private List<Peliculas> peliculas = new ArrayList<>();
     private Context context;
 
     public CarteleraAdapter(List<Peliculas> peliculas, Context context) {
@@ -28,7 +29,7 @@ public class CarteleraAdapter extends RecyclerView.Adapter<CarteleraAdapter.View
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public CarteleraAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cartelera, parent, false);
         return new ViewHolder(view);
     }

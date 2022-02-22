@@ -53,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (id == R.id.preferences) {
-
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
         }
 
 

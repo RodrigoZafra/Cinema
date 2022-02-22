@@ -1,0 +1,37 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/messages_header">
+        <EditTextPreference
+            app:dialogTitle="@string/texto_cuadro_correo_electronico"
+            app:key="email"
+            app:summary="@string/descripcion_correo_electronico"
+            app:title="@string/correo_electronico" />
+        <ListPreference
+            app:entries="@array/entradas_sexo"
+            app:entryValues="@array/valores_sexo"
+            app:key="@string/sexo"
+            app:summary="@string/descripcion_sexo"
+            app:title="@string/sexo" />
+        <MultiSelectListPreference
+            app:entries="@array/entradas_aficiones"
+            app:entryValues="@array/valores_aficiones"
+            app:key="@string/pelisFav"
+            app:summary="@string/descripcion_aficiones"
+            app:title="@string/pelisFav" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/sync_header">
+        <CheckBoxPreference
+            app:defaultValue="false"
+            app:key="@string/activar_sonido"
+            app:summaryOff="@string/descripcion_activar_sonido_off"
+            app:summaryOn="@string/descripcion_activar_sonido_on"
+            app:title="@string/activar_sonido" />
+
+        <SwitchPreference
+            app:key="notificaciones"
+            app:summary="@string/descripcion_activar_notificaciones"
+            app:title="@string/activar_notificaciones" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

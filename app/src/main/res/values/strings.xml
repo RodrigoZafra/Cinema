@@ -1,3 +1,40 @@
 <resources>
     <string name="app_name">Cinema</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Mis_datos</string>
+    <string name="sync_header">Opciones</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <!--Strings para el control del sonido-->ç
+    <string name="activar_sonido">Activar sonido</string>
+    <string name="descripcion_activar_sonido_on">Sonido activo</string>
+    <string name="descripcion_activar_sonido_off">Sonido inactivo</string>
+
+    <!--Strings para el control del email-->
+    <string name="correo_electronico">Email</string>
+    <string name="descripcion_correo_electronico">Aqui se guardara el correo electronico</string>
+    <string name="texto_cuadro_correo_electronico">Introduce aqui tu email</string>
+
+    <!--Strings para sexo-->
+    <string name="sexo">Sexo</string>
+    <string name="descripcion_sexo">Aqui se guardara el sexo</string>
+    <!--Strings para aficiones-->
+    <string name="pelisFav">Peliculas favoritas</string>
+    <string name="descripcion_aficiones">Aqui se guardarán el tipo de peliculas que te gustan</string>
+
+    <!--Strings para aficiones-->
+    <string name="activar_notificaciones">Activar notificaciones</string>
+    <string name="descripcion_activar_notificaciones">Aqui se se indicara si se activan las notificaciones</string>
 </resources>
