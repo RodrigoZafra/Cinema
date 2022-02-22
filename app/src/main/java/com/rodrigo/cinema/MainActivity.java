@@ -1,10 +1,15 @@
 package com.rodrigo.cinema;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.rodrigo.cinema.Adapter.Peliculas;
 
@@ -31,5 +36,27 @@ public class MainActivity extends AppCompatActivity {
         peliculasList.add(new Peliculas("Doctor Strange", "Es una pelicula de marvel", "https://yelmocines.es/sinopsis/licorice-pizza"));
 
         carteleraAdapter = new CarteleraAdapter(peliculasList, this);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {//Aparece el menu en la barra de arriba
+        getMenuInflater().inflate(R.menu.top_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {//Gestiona las acciones sobre los botones
+        int id = item.getItemId();
+
+        if (id == R.id.signOut) {
+
+        }
+
+        if (id == R.id.preferences) {
+
+        }
+
+
+        return super.onOptionsItemSelected(item);
     }
 }
