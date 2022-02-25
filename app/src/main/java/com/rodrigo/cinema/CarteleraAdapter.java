@@ -13,14 +13,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.rodrigo.cinema.Adapter.Peliculas;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CarteleraAdapter extends RecyclerView.Adapter<CarteleraAdapter.ViewHolder> {
 
-    private List<Peliculas> peliculas;
+    private ArrayList<Peliculas> peliculas;
     private Context context;
 
-    public CarteleraAdapter(List<Peliculas> peliculas, Context context) {
+    public CarteleraAdapter(ArrayList<Peliculas> peliculas, Context context) {
         this.peliculas = peliculas;
         this.context = context;
     }
