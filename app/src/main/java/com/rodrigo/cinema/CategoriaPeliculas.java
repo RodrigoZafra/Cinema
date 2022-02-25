@@ -52,7 +52,8 @@ public class CategoriaPeliculas extends AppCompatActivity {
             startActivity(intent);
         }
         if (id == R.id.preferences) {
-
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
