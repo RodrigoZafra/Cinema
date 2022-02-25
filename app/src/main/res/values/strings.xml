@@ -2,7 +2,9 @@
     <string name="app_name">Cinema</string>
     <string name="title_activity_categoria_peliculas">Cartelera</string>
     <string name="tab_text_1">Accion</string>
-    <string name="tab_text_2">Ficcion</string>
-    <string name="tab_text_3">Aventura</string>
+    <string name="tab_text_2">Comedia</string>
+    <string name="tab_text_3">Drama</string>
     <string name="tab_text_4">Romance</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">hola soy el frafmento 1</string>
 </resources>

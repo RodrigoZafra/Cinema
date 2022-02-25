@@ -11,7 +11,11 @@
         <entry key="..\:/Cinema/app/src/main/res/layout/activity_signup.xml" value="0.36666666666666664" />
         <entry key="..\:/Cinema/app/src/main/res/layout/activity_splash_screen.xml" value="0.35260416666666666" />
         <entry key="..\:/Cinema/app/src/main/res/layout/cartelera.xml" value="0.36666666666666664" />
+        <entry key="..\:/Cinema/app/src/main/res/layout/fragment_accion.xml" value="0.36666666666666664" />
+        <entry key="..\:/Cinema/app/src/main/res/layout/fragment_aventura.xml" value="0.36666666666666664" />
         <entry key="..\:/Cinema/app/src/main/res/layout/fragment_categoria_peliculas.xml" value="0.36666666666666664" />
+        <entry key="..\:/Cinema/app/src/main/res/layout/fragment_comedia.xml" value="0.296195652173913" />
+        <entry key="..\:/Cinema/app/src/main/res/layout/fragment_drama.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

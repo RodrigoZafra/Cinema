@@ -8,6 +8,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.rodrigo.cinema.FragmentAccion;
+import com.rodrigo.cinema.FragmentComedia;
+import com.rodrigo.cinema.FragmentDrama;
 import com.rodrigo.cinema.R;
 
 /**
@@ -27,9 +30,18 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        // getItem is called to instantiate the fragment for the given page.
-        // Return a PlaceholderFragment (defined as a static inner class below).
-        return PlaceholderFragment.newInstance(position + 1);
+        switch (position) {
+            case 0:
+                return new FragmentAccion();
+            case 1:
+                return new FragmentComedia();
+            case 2:
+                return new FragmentDrama();
+            case 3:
+                return new FragmentTerror();
+            default:
+                return null;
+        }
     }
 
     @Nullable
