@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import com.rodrigo.cinema.FragmentAccion;
 import com.rodrigo.cinema.FragmentComedia;
 import com.rodrigo.cinema.FragmentDrama;
+import com.rodrigo.cinema.FragmentTerror;
 import com.rodrigo.cinema.R;
 
 /**

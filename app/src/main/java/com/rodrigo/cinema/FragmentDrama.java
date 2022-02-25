@@ -79,7 +79,7 @@ public class FragmentDrama extends Fragment {
     }
 
     private void llenarLista() {
-        listaPeliculasDrama.add(new Peliculas("Las ilusiones perdidas", "Director: Xavier Giannoli", "https://eu-static.yelmocines.es/content/img/movies/posters/4160/1/1/4160.jpg"));
+        listaPeliculasDrama.add(new Peliculas("Ilusiones perdidas", "Director: Xavier Giannoli", "https://eu-static.yelmocines.es/content/img/movies/posters/4160/1/1/4160.jpg"));
         listaPeliculasDrama.add(new Peliculas("Un pequeño mundo", "Director: Laura Wandel", "https://eu-static.yelmocines.es/content/img/movies/posters/4163/1/1/4163.jpg"));
         listaPeliculasDrama.add(new Peliculas("Great freedom", "Director: ", "https://eu-static.yelmocines.es/content/img/movies/posters/4165/1/1/4165.jpg"));
         listaPeliculasDrama.add(new Peliculas("Muerte en el nilo", "Director: ", "https://eu-static.yelmocines.es/content/img/movies/posters/3295/1/1/3295.jpg"));

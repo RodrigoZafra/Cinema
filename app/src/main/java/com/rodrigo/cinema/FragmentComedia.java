@@ -82,7 +82,7 @@ public class FragmentComedia extends Fragment {
     }
 
     private void llenarLista() {
-        listaPeliculasComedia.add(new Peliculas("Señor dame paciencia", "Director: Benjamín Herranz", "https://image.tmdb.org/t/p/w185/9oIcKDhNXpi6wVdLhQQApdp9YLz.jpg"));
+        listaPeliculasComedia.add(new Peliculas("Dame paciencia", "Director: Benjamín Herranz", "https://image.tmdb.org/t/p/w185/9oIcKDhNXpi6wVdLhQQApdp9YLz.jpg"));
         listaPeliculasComedia.add(new Peliculas("Kun fu panda", "Director: John Stevenson", "https://image.tmdb.org/t/p/w185/wzOERnvuM3c2mbAvCu5pw1QIaZX.jpg"));
         listaPeliculasComedia.add(new Peliculas("Ahora o nunca", "Director: Brian Relyea", "https://image.tmdb.org/t/p/w185/bBgc1F5o6PMOxTPrOoZ3oIkP2KT.jpg"));
         listaPeliculasComedia.add(new Peliculas("Entre rosas", "Director: Pierre Pinaud", "https://image.tmdb.org/t/p/w185/w9nP4DisTtdynffsRAzXdXyvsCo.jpg"));
