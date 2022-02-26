@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormularioActivity">
+
+    <TextView
+        android:id="@+id/tvComprarEntrada"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Compra tu entrada"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvElegirCine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Elige tu cine:"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvComprarEntrada" />
+
+    <Spinner
+        android:id="@+id/spinnerCine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:backgroundTint="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvElegirCine" />
+
+    <TextView
+        android:id="@+id/tvNumEntradas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Elige el número de entradas:"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerCine" />
+
+    <EditText
+        android:id="@+id/etNumEntradas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNumEntradas" />
+
+    <TextView
+        android:id="@+id/tvAsientos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Elige tu asiento:"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etNumEntradas" />
+
+    <TextView
+        android:id="@+id/tvA1"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="30dp"
+        android:text="A1"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/A1"
+        app:layout_constraintTop_toBottomOf="@id/tvAsientos" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="40dp"
+        android:text="B1"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/B1"
+        app:layout_constraintTop_toBottomOf="@id/tvA1" />
+
+    <ImageView
+        android:id="@+id/A1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="250dp"
+        android:src="@drawable/asiento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAsientos" />
+
+    <ImageView
+        android:id="@+id/A2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/asiento"
+        app:layout_constraintStart_toEndOf="@id/A1"
+        app:layout_constraintTop_toBottomOf="@id/tvAsientos" />
+
+    <ImageView
+        android:id="@+id/A3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/asiento"
+        app:layout_constraintStart_toEndOf="@id/A2"
+        app:layout_constraintTop_toBottomOf="@id/tvAsientos" />
+
+    <ImageView
+        android:id="@+id/A4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/asiento"
+        app:layout_constraintStart_toEndOf="@id/A3"
+        app:layout_constraintTop_toBottomOf="@id/tvAsientos" />
+
+    <ImageView
+        android:id="@+id/A5"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/asiento"
+        app:layout_constraintStart_toEndOf="@id/A4"
+        app:layout_constraintTop_toBottomOf="@id/tvAsientos" />
+
+    <ImageView
+        android:id="@+id/A6"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/asiento"
+        app:layout_constraintStart_toEndOf="@id/A5"
+        app:layout_constraintTop_toBottomOf="@id/tvAsientos" />
+
+    <ImageView
+        android:id="@+id/A7"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/asiento"
+        app:layout_constraintStart_toEndOf="@id/A6"
+        app:layout_constraintTop_toBottomOf="@id/tvAsientos" />
+
+    <ImageView
+        android:id="@+id/B1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="250dp"
+        android:src="@drawable/asiento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/A1" />
+
+    <ImageView
+        android:id="@+id/B2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/asiento"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

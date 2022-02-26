@@ -8,6 +8,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,6 +23,7 @@ import com.rodrigo.cinema.databinding.ActivityCategoriaPeliculasBinding;
 public class CategoriaPeliculas extends AppCompatActivity {
 
     private ActivityCategoriaPeliculasBinding binding;
+    private CardView cardView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +38,11 @@ public class CategoriaPeliculas extends AppCompatActivity {
         TabLayout tabs = binding.tabs;
         tabs.setupWithViewPager(viewPager);
 
+        cardView = findViewById(R.id.cardview);
+
+
     }
+
 
     public boolean onCreateOptionsMenu(Menu menu) {//Aparece el menu en la barra de arriba
         getMenuInflater().inflate(R.menu.top_menu, menu);
