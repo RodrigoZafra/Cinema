@@ -13,12 +13,14 @@
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
             android:name=".FormularioActivity"
-            android:exported="true">
-            <intent-filter>
+            android:exported="true"
+            android:label="Comprar entrada"
+            android:theme="@style/Theme.AppCompat">
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter-->
         </activity>
         <activity
             android:name=".SettingsActivity"
@@ -34,6 +36,11 @@
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
         <activity
@@ -42,11 +49,7 @@
         <activity
             android:name=".LoginActivity"
             android:exported="true">
-            <!--<intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
         </activity>
     </application>
 
