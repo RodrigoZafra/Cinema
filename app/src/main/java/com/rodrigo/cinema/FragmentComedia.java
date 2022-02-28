@@ -1,5 +1,6 @@
 package com.rodrigo.cinema;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -73,7 +74,7 @@ public class FragmentComedia extends Fragment {
         recyclerPeliculasComedia = vista.findViewById(R.id.recyclerPeliculasComedia);
         recyclerPeliculasComedia.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
 
-        CarteleraAdapter adaptador = new CarteleraAdapter(listaPeliculasComedia, getContext());
+        CarteleraAdapter adaptador = new CarteleraAdapter(listaPeliculasComedia, getContext(), this);
         recyclerPeliculasComedia.setAdapter(adaptador);
 
         llenarLista();
@@ -91,5 +92,9 @@ public class FragmentComedia extends Fragment {
         listaPeliculasComedia.add(new Peliculas("Amor artificial", "Director: David Asavanond", "https://image.tmdb.org/t/p/w185/cIJzuZpCzsCTcHISMWbAwDt2LGc.jpg"));
         listaPeliculasComedia.add(new Peliculas("Tammy", "Director: Ben Falcone", "https://image.tmdb.org/t/p/w185/nRPPVx9x5vqlDAQIB6WlZZ4Vq3B.jpg"));
         listaPeliculasComedia.add(new Peliculas("Flashback", "Director: Caroline Vigneaux", "https://image.tmdb.org/t/p/w185/wLJEwWOUmHHBW2HxkP8LEoqvq1L.jpg"));
+    }
+    public void abrirFormulario() {
+        Intent intent = new Intent(getActivity(), FormularioActivity.class);
+        startActivity(intent);
     }
 }

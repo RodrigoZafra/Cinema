@@ -1,5 +1,6 @@
 package com.rodrigo.cinema;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -71,7 +72,7 @@ public class FragmentAccion extends Fragment {
         listaPeliculasAccion = new ArrayList<>();
         recyclerPeliculasAccion = vista.findViewById(R.id.recyclerPeliculasAccion);
         recyclerPeliculasAccion.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
-        CarteleraAdapter adaptador = new CarteleraAdapter(listaPeliculasAccion, getContext());
+        CarteleraAdapter adaptador = new CarteleraAdapter(listaPeliculasAccion, getContext(), this);
         recyclerPeliculasAccion.setAdapter(adaptador);
 
         llenarLista();
@@ -89,5 +90,10 @@ public class FragmentAccion extends Fragment {
         listaPeliculasAccion.add(new Peliculas("Baby driver", "Director: Darrin Prescott", "https://image.tmdb.org/t/p/w185/o2YToge3eBhxC89m87zkWKVEx2O.jpg"));
         listaPeliculasAccion.add(new Peliculas("La soga salvation", "Director: Manny Pérez", "https://image.tmdb.org/t/p/w185/wRk6hwsEIIO0BqGH8FIc1Zbf7Wv.jpg"));
         listaPeliculasAccion.add(new Peliculas("El redentor", "Director:  Steven Knight", "https://image.tmdb.org/t/p/w185/7y9HJW8qgcqEZuT9Ioj1CwpArD7.jpg"));
+    }
+
+    public void abrirFormulario() {
+        Intent intent = new Intent(getActivity(), FormularioActivity.class);
+        startActivity(intent);
     }
 }

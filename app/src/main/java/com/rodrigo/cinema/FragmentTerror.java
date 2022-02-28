@@ -1,5 +1,6 @@
 package com.rodrigo.cinema;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -73,7 +74,7 @@ public class FragmentTerror extends Fragment {
         recyclerPeliculasTerror = vista.findViewById(R.id.recyclerPeliculasTerror);
         recyclerPeliculasTerror.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
 
-        CarteleraAdapter adaptador = new CarteleraAdapter(listaPeliculasTerror, getContext());
+        CarteleraAdapter adaptador = new CarteleraAdapter(listaPeliculasTerror, getContext(), this);
         recyclerPeliculasTerror.setAdapter(adaptador);
 
         llenarLista();
@@ -91,5 +92,10 @@ public class FragmentTerror extends Fragment {
         listaPeliculasTerror.add(new Peliculas("El paramo", "Director:  Inma Cuesta", "https://cdntmdb.xyz/p/v2/w1/WEvTIYqjA8M2AGvFfNeM.jpg"));
         listaPeliculasTerror.add(new Peliculas("Megalodon", "Director:  Michael Madsen", "https://cdntmdb.xyz/p/v2/w1/e58eCjRv76rejV0.jpg"));
         listaPeliculasTerror.add(new Peliculas("La monja", "Director:  Demián Bichir", "https://cdntmdb.xyz/p/v2/w1/wmYnBNSJQrkGaQGYTi5M.jpg"));
+    }
+
+    public void abrirFormulario() {
+        Intent intent = new Intent(getActivity(), FormularioActivity.class);
+        startActivity(intent);
     }
 }

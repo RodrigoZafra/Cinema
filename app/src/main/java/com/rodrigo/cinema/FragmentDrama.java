@@ -1,5 +1,6 @@
 package com.rodrigo.cinema;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -71,7 +72,7 @@ public class FragmentDrama extends Fragment {
         listaPeliculasDrama = new ArrayList<>();
         recyclerPeliculasDrama = vista.findViewById(R.id.recyclerPeliculasDrama);
         recyclerPeliculasDrama.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
-        CarteleraAdapter adaptador = new CarteleraAdapter(listaPeliculasDrama, getContext());
+        CarteleraAdapter adaptador = new CarteleraAdapter(listaPeliculasDrama, getContext(),this);
         recyclerPeliculasDrama.setAdapter(adaptador);
 
         llenarLista();
@@ -88,5 +89,9 @@ public class FragmentDrama extends Fragment {
         listaPeliculasDrama.add(new Peliculas("Monday", "Director: Argyris Papadimitropoulos", "https://image.tmdb.org/t/p/w185/o4Gc5quiCBtiW6mgkPvDWKAiFVs.jpg"));
         listaPeliculasDrama.add(new Peliculas("Joe Bell", "Director: Reinaldo Marcus", "https://image.tmdb.org/t/p/w185/9HfQD60w6f6PPkfdiI6ipJSw0bD.jpg"));
         listaPeliculasDrama.add(new Peliculas("Belfast", "Director: Anna Brabbins", "https://image.tmdb.org/t/p/w185/dRjbdzmiypTGDktRCfcMsjqqGud.jpg"));
+    }
+    public void abrirFormulario() {
+        Intent intent = new Intent(getActivity(), FormularioActivity.class);
+        startActivity(intent);
     }
 }

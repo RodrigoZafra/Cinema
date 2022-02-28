@@ -22,12 +22,34 @@ public class CarteleraAdapter extends RecyclerView.Adapter<CarteleraAdapter.View
 
     private ArrayList<Peliculas> peliculas;
     private Context context;
+    private FragmentAccion fragmentAccion;
+    private FragmentComedia fragmentComedia;
+    private FragmentTerror fragmentTerror;
+    private FragmentDrama fragmentDrama;
 
-    public CarteleraAdapter(ArrayList<Peliculas> peliculas, Context context) {
+    public CarteleraAdapter(ArrayList<Peliculas> peliculas, Context context, FragmentAccion fragmentAccion) {
         this.peliculas = peliculas;
         this.context = context;
+        this.fragmentAccion = fragmentAccion;
     }
 
+    public CarteleraAdapter(ArrayList<Peliculas> peliculas, Context context, FragmentComedia fragmentComedia) {
+        this.peliculas = peliculas;
+        this.context = context;
+        this.fragmentComedia = fragmentComedia;
+    }
+
+    public CarteleraAdapter(ArrayList<Peliculas> peliculas, Context context, FragmentTerror fragmentTerror) {
+        this.peliculas = peliculas;
+        this.context = context;
+        this.fragmentTerror = fragmentTerror;
+    }
+
+    public CarteleraAdapter(ArrayList<Peliculas> peliculas, Context context, FragmentDrama fragmentDrama) {
+        this.peliculas = peliculas;
+        this.context = context;
+        this.fragmentDrama = fragmentDrama;
+    }
 
     @NonNull
     @Override
@@ -43,6 +65,20 @@ public class CarteleraAdapter extends RecyclerView.Adapter<CarteleraAdapter.View
         Glide.with(context).load(peliculas.get(position).getImagen())
                 .centerCrop()
                 .into(holder.img_pelicula);
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (fragmentAccion != null) {
+                    fragmentAccion.abrirFormulario();
+                } else if (fragmentComedia != null) {
+                    fragmentComedia.abrirFormulario();
+                } else if (fragmentDrama != null) {
+                    fragmentDrama.abrirFormulario();
+                } else {
+                    fragmentTerror.abrirFormulario();
+                }
+            }
+        });
     }
 
     @Override
@@ -54,6 +90,7 @@ public class CarteleraAdapter extends RecyclerView.Adapter<CarteleraAdapter.View
         private ImageView img_pelicula;
         private TextView tvTitulo;
         private TextView tvDesc;
+        private CardView cardView;
 
 
         public ViewHolder(@NonNull View itemView) {
@@ -61,6 +98,8 @@ public class CarteleraAdapter extends RecyclerView.Adapter<CarteleraAdapter.View
             img_pelicula = itemView.findViewById(R.id.img_pelicula);
             tvTitulo = itemView.findViewById(R.id.tvTituloPelicula);
             tvDesc = itemView.findViewById(R.id.tvDescPelicula);
+            cardView = itemView.findViewById(R.id.cardview);
         }
     }
+
 }

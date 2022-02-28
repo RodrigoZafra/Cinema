@@ -37,10 +37,6 @@ public class CategoriaPeliculas extends AppCompatActivity {
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = binding.tabs;
         tabs.setupWithViewPager(viewPager);
-
-        cardView = findViewById(R.id.cardview);
-
-
     }
 
 

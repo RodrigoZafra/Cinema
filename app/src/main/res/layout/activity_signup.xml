@@ -28,14 +28,27 @@
         android:layout_marginEnd="32dp"
         android:backgroundTint="@color/verde_oscuro"
         android:ems="10"
-        android:hint="Nombre y Apellidos"
-        android:inputType="textPassword"
+        android:hint="Nombre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewRegister" />
 
     <EditText
-        android:id="@+id/edtEmail"
+        android:id="@+id/edtApellidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/verde_oscuro"
+        android:ems="10"
+        android:hint="Apellidos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtNombre" />
+
+    <EditText
+        android:id="@+id/edtRegisterEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -47,10 +60,10 @@
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtNombre" />
+        app:layout_constraintTop_toBottomOf="@+id/edtApellidos" />
 
     <EditText
-        android:id="@+id/edtPasssword"
+        android:id="@+id/edtRegisterPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -62,36 +75,21 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/edtRegisterEmail" />
 
-    <EditText
-        android:id="@+id/edtRepeatPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:backgroundTint="@color/verde_oscuro"
-        android:ems="10"
-        android:hint="Repetir contraseña"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPasssword" />
 
     <Button
-        android:id="@+id/buttonLogin"
+        android:id="@+id/btnRegistrarse"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/button_style"
-        android:onClick="registrarse"
         android:text="Registrarse"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtRepeatPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/edtRegisterPassword" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

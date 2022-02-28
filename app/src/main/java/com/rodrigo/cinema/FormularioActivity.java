@@ -38,6 +38,7 @@ public class FormularioActivity extends AppCompatActivity {
     public void elegirAsiento(View view) {
         ImageView iv = findViewById(view.getId());
         iv.setImageDrawable(getDrawable(R.drawable.asientoocupado));
+
     }
 
 }

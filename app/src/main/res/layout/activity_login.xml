@@ -35,7 +35,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageViewLogin" />
 
     <EditText
-        android:id="@+id/edtPasssword"
+        android:id="@+id/edtRegisterPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -57,11 +57,10 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/button_style"
-        android:onClick="acceder"
         android:text="Acceder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPasssword" />
+        app:layout_constraintTop_toBottomOf="@+id/edtRegisterPassword" />
 
     <Button
         android:id="@+id/buttonRegister"
@@ -72,7 +71,6 @@
         android:layout_marginEnd="32dp"
         android:background="@drawable/button_style_border"
         android:text="Registrarse"
-        android:onClick="registrarse"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
