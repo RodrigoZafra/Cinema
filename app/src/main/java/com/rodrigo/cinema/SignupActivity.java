@@ -33,6 +33,7 @@ public class SignupActivity extends AppCompatActivity {
 
         registrar = findViewById(R.id.btnRegistrarse);
 
+        //Este método nos permite registrar un usuario siempre y cuando no este registrado previamente o se introduzcan mal los datos en los campos
         registrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,7 +53,7 @@ public class SignupActivity extends AppCompatActivity {
                 }
             }
         });
-
+        //Animación de la imagen del ticket
         ImageView mTicket = findViewById(R.id.imageViewRegister);
         Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.animacion_login);
         mTicket.startAnimation(myAnim);

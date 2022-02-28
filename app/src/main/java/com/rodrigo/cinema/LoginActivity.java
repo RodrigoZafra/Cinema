@@ -39,7 +39,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mTicket.startAnimation(myAnim);
     }
 
-
+    /*En este método vamos a decirle que si pulsa el botón de login y el usuario esta registrado que acceda a la cartelera para ver las películas
+    y en el caso de que pulses el botón registrar que te lleve a la ventana de signup para proceder a registrar el usuario
+    */
     @Override
     public void onClick(View v) {
         switch (v.getId()) {

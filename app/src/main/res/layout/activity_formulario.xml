@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#202732"
     tools:context=".FormularioActivity">
 
     <TextView
@@ -390,6 +391,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:background="@drawable/button_style"
+        android:onClick="informacionEntrada"
         android:text="Pasar a finalizar la compra"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

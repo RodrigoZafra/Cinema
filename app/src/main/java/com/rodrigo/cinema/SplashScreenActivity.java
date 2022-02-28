@@ -35,6 +35,7 @@ public class SplashScreenActivity extends AppCompatActivity {
 
     }
 
+    //Este método permite que pase directamente al login cuando pasan los 2000 milisegundos y limpia las flags para que no se pueda volver al splashScreen
     private void openApp(boolean locationPermission) {
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
