@@ -8,6 +8,7 @@ import android.widget.TextView;
 public class ResumenCompra extends AppCompatActivity {
     private TextView nombreCine;
     private TextView numeroEntradas;
+    private TextView asientoElegido;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,10 +16,12 @@ public class ResumenCompra extends AppCompatActivity {
         setContentView(R.layout.activity_resumen_compra);
         nombreCine = findViewById(R.id.tvMostrarCine);
         numeroEntradas = findViewById(R.id.tvMostrarEntradas);
+        asientoElegido = findViewById(R.id.tvMostrarAsientos);
 
         Bundle bundle = this.getIntent().getExtras();
         if (bundle != null) {
             nombreCine.setText(bundle.getString("nombreCine"));
+            asientoElegido.setText(bundle.getString("asientoElegido"));
         }
     }
 }
