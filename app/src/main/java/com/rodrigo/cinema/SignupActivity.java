@@ -16,7 +16,7 @@ public class SignupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        ImageView mTicket = findViewById(R.id.imageViewLogin);
+        ImageView mTicket = findViewById(R.id.imageViewRegister);
         Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.animacion_login);
         mTicket.startAnimation(myAnim);
     }
