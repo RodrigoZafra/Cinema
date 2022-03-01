@@ -15,20 +15,17 @@
             android:name=".ResumenCompra"
             android:exported="false"
             android:label="Resumen Compra"
-            android:theme="@style/Theme.AppCompat" />
+            android:theme="@style/Theme.AppCompat"/>
         <activity
             android:name=".FormularioActivity"
-            android:exported="false"
+            android:exported="true"
             android:label="Comprar entrada"
             android:theme="@style/Theme.AppCompat">
-
-            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter
-            -->
+            </intent-filter>
         </activity>
         <activity
             android:name=".SettingsActivity"
@@ -43,12 +40,12 @@
             android:theme="@style/Theme.AppCompat" />
         <activity
             android:name=".SplashScreenActivity"
-            android:exported="true">
-            <intent-filter>
+            android:exported="false">
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter-->
         </activity>
         <activity
             android:name=".SignupActivity"

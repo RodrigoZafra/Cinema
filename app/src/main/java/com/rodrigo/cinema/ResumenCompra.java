@@ -6,22 +6,23 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class ResumenCompra extends AppCompatActivity {
-    private TextView nombreCine;
-    private TextView numeroEntradas;
-    private TextView asientoElegido;
+    private TextView totalCompra;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resumen_compra);
-        nombreCine = findViewById(R.id.tvMostrarCine);
-        numeroEntradas = findViewById(R.id.tvMostrarEntradas);
-        asientoElegido = findViewById(R.id.tvMostrarAsientos);
+        TextView nombreCine = findViewById(R.id.tvMostrarCine);
+        TextView numeroEntradas = findViewById(R.id.tvMostrarEntradas);
+        TextView asientoElegido = findViewById(R.id.tvMostrarAsientos);
+        totalCompra = findViewById(R.id.tvMostrarTotalCompra);
 
         Bundle bundle = this.getIntent().getExtras();
-        if (bundle != null) {
-            nombreCine.setText(bundle.getString("nombreCine"));
-            asientoElegido.setText(bundle.getString("asientoElegido"));
-        }
+
+        nombreCine.setText(bundle.getString("nombreCine"));
+        numeroEntradas.setText(bundle.getString("numEntradas"));
+        asientoElegido.setText(bundle.getStringArrayList("arrayAsientos").toString());
+        totalCompra.setText(Integer.parseInt(bundle.getString("numEntradas"))*9 + "€");
+
     }
 }

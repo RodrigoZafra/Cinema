@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -17,34 +18,7 @@ public class FormularioActivity extends AppCompatActivity {
     private Spinner spinnerCine;
     private EditText etNumEntradas;
     private String nombreCine;
-    private ImageView A1;
-    private ImageView A2;
-    private ImageView A3;
-    private ImageView A4;
-    private ImageView A5;
-    private ImageView A6;
-    private ImageView A7;
-    private ImageView B1;
-    private ImageView B2;
-    private ImageView B3;
-    private ImageView B4;
-    private ImageView B5;
-    private ImageView B6;
-    private ImageView B7;
-    private ImageView C1;
-    private ImageView C2;
-    private ImageView C3;
-    private ImageView C4;
-    private ImageView C5;
-    private ImageView C6;
-    private ImageView C7;
-    private ImageView D1;
-    private ImageView D2;
-    private ImageView D3;
-    private ImageView D4;
-    private ImageView D5;
-    private ImageView D6;
-    private ImageView D7;
+    private ArrayList<ImageView> imagenesAsientos;
     int numEntradas;
 
     @Override
@@ -54,35 +28,35 @@ public class FormularioActivity extends AppCompatActivity {
 
         spinnerCine = findViewById(R.id.spinnerCine);
         etNumEntradas = findViewById(R.id.editTextNumber);
-        A1 = findViewById(R.id.A1);
-        A2 = findViewById(R.id.A2);
-        A3 = findViewById(R.id.A3);
-        A4 = findViewById(R.id.A4);
-        A5 = findViewById(R.id.A5);
-        A6 = findViewById(R.id.A6);
-        A7 = findViewById(R.id.A7);
-        B1 = findViewById(R.id.B1);
-        B2 = findViewById(R.id.B2);
-        B3 = findViewById(R.id.B3);
-        B4 = findViewById(R.id.B4);
-        B5 = findViewById(R.id.B5);
-        B6 = findViewById(R.id.B6);
-        B7 = findViewById(R.id.B7);
-        C1 = findViewById(R.id.C1);
-        C2 = findViewById(R.id.C2);
-        C3 = findViewById(R.id.C3);
-        C4 = findViewById(R.id.C4);
-        C5 = findViewById(R.id.C5);
-        C6 = findViewById(R.id.C6);
-        C7 = findViewById(R.id.C7);
-        D1 = findViewById(R.id.D1);
-        D2 = findViewById(R.id.D2);
-        D3 = findViewById(R.id.D3);
-        D4 = findViewById(R.id.D4);
-        D5 = findViewById(R.id.D5);
-        D6 = findViewById(R.id.D6);
-        D7 = findViewById(R.id.D7);
-
+        imagenesAsientos = new ArrayList<>();
+        imagenesAsientos.add(findViewById(R.id.A1));
+        imagenesAsientos.add(findViewById(R.id.A2));
+        imagenesAsientos.add(findViewById(R.id.A3));
+        imagenesAsientos.add(findViewById(R.id.A4));
+        imagenesAsientos.add(findViewById(R.id.A5));
+        imagenesAsientos.add(findViewById(R.id.A6));
+        imagenesAsientos.add(findViewById(R.id.A7));
+        imagenesAsientos.add(findViewById(R.id.B1));
+        imagenesAsientos.add(findViewById(R.id.B2));
+        imagenesAsientos.add(findViewById(R.id.B3));
+        imagenesAsientos.add(findViewById(R.id.B4));
+        imagenesAsientos.add(findViewById(R.id.B5));
+        imagenesAsientos.add(findViewById(R.id.B6));
+        imagenesAsientos.add(findViewById(R.id.B7));
+        imagenesAsientos.add(findViewById(R.id.C1));
+        imagenesAsientos.add(findViewById(R.id.C2));
+        imagenesAsientos.add(findViewById(R.id.C3));
+        imagenesAsientos.add(findViewById(R.id.C4));
+        imagenesAsientos.add(findViewById(R.id.C5));
+        imagenesAsientos.add(findViewById(R.id.C6));
+        imagenesAsientos.add(findViewById(R.id.C7));
+        imagenesAsientos.add(findViewById(R.id.D1));
+        imagenesAsientos.add(findViewById(R.id.D2));
+        imagenesAsientos.add(findViewById(R.id.D3));
+        imagenesAsientos.add(findViewById(R.id.D4));
+        imagenesAsientos.add(findViewById(R.id.D5));
+        imagenesAsientos.add(findViewById(R.id.D6));
+        imagenesAsientos.add(findViewById(R.id.D7));
         ArrayList<String> cines = new ArrayList<>();
         cines.add("Rivas H2O");
         cines.add("Ideal");
@@ -116,19 +90,45 @@ public class FormularioActivity extends AppCompatActivity {
         }
     }
 
-    public void informacionEntrada(View view) {
-        ImageView iv = findViewById(view.getId());
-        Intent intent = new Intent(FormularioActivity.this, ResumenCompra.class);
-        Bundle bundle = new Bundle();
-        bundle.putString("nombreCine", nombreCine);
+    public void comprobarDatos(View view) {
+        if (Integer.parseInt(etNumEntradas.getText().toString()) > 28) {
+            Toast.makeText(this, "El máximo de entradas son 28", Toast.LENGTH_SHORT).show();
+        } else {
+            informacionEntrada(view);
+        }
+    }
 
-        if (A1.getDrawable().getConstantState().equals(getResources().getDrawable(R.drawable.asientoocupado).getConstantState())) {
-            bundle.putString("asientoElegido", "A1,");
+    private void informacionEntrada(View view) {
+        ArrayList<String> asientos = new ArrayList<>();
+
+        int contFila = 1;
+        for (ImageView iva : imagenesAsientos) {
+            if (iva.getDrawable().getConstantState().equals(getResources().getDrawable(R.drawable.asientoocupado).getConstantState())) {
+                if (contFila < 8)
+                    asientos.add("A" + contFila);
+                if (contFila > 7 && contFila < 15)
+                    asientos.add("B" + (contFila - 7));
+                if (contFila > 14 && contFila < 21)
+                    asientos.add("C" + (contFila - 14));
+                if (contFila > 20 && contFila < 29)
+                    asientos.add("D" + (contFila - 21));
+            }
+            contFila++;
         }
 
-
-        intent.putExtras(bundle);
-        startActivity(intent);
+        if (Integer.parseInt(etNumEntradas.getText().toString()) != asientos.size()) {
+            Toast.makeText(this, "Tienes que elegir tantos asientos como entradas", Toast.LENGTH_SHORT).show();
+            asientos = new ArrayList<>();
+        } else {
+            Intent intent = new Intent(FormularioActivity.this, ResumenCompra.class);
+            Bundle bundle = new Bundle();
+            bundle.putString("nombreCine", nombreCine);
+            bundle.putStringArrayList("arrayAsientos", asientos);
+            bundle.putString("numEntradas", etNumEntradas.getText().toString());
+            intent.putExtras(bundle);
+            startActivity(intent);
+        }
     }
 }
+
 

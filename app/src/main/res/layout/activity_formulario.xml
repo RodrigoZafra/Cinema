@@ -391,7 +391,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:background="@drawable/button_style"
-        android:onClick="informacionEntrada"
+        android:onClick="comprobarDatos"
         android:text="Pasar a finalizar la compra"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

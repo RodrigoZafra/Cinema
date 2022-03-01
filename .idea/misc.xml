@@ -5,22 +5,16 @@
       <map>
         <entry key="..\:/Cinema/app/src/main/res/drawable/button_style.xml" value="0.294" />
         <entry key="..\:/Cinema/app/src/main/res/drawable/button_style_border.xml" value="0.1775" />
-        <entry key="..\:/Cinema/app/src/main/res/layout/activity_categoria_peliculas.xml" value="0.36666666666666664" />
-        <entry key="..\:/Cinema/app/src/main/res/layout/activity_formulario.xml" value="0.36666666666666664" />
-        <entry key="..\:/Cinema/app/src/main/res/layout/activity_login.xml" value="0.36666666666666664" />
         <entry key="..\:/Cinema/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
-        <entry key="..\:/Cinema/app/src/main/res/layout/activity_resumen_compra.xml" value="0.36666666666666664" />
-        <entry key="..\:/Cinema/app/src/main/res/layout/activity_signup.xml" value="0.36666666666666664" />
-        <entry key="..\:/Cinema/app/src/main/res/layout/activity_splash_screen.xml" value="0.35260416666666666" />
-        <entry key="..\:/Cinema/app/src/main/res/layout/cartelera.xml" value="0.36666666666666664" />
-        <entry key="..\:/Cinema/app/src/main/res/layout/fragment_accion.xml" value="0.36666666666666664" />
-        <entry key="..\:/Cinema/app/src/main/res/layout/fragment_aventura.xml" value="0.36666666666666664" />
-        <entry key="..\:/Cinema/app/src/main/res/layout/fragment_categoria_peliculas.xml" value="0.36666666666666664" />
-        <entry key="..\:/Cinema/app/src/main/res/layout/fragment_comedia.xml" value="0.296195652173913" />
-        <entry key="..\:/Cinema/app/src/main/res/layout/fragment_drama.xml" value="0.36666666666666664" />
-        <entry key="..\:/Cinema/app/src/main/res/layout/fragment_terror.xml" value="0.36666666666666664" />
-        <entry key="..\:/Cinema/app/src/main/res/menu/top_menu.xml" value="0.36666666666666664" />
-        <entry key="..\:/Cinema/app/src/main/res/xml/root_preferences.xml" value="0.36666666666666664" />
+        <entry key="..\:/Rodrigo y Mario/Cinema/app/src/main/res/layout/activity_formulario.xml" value="0.1" />
+        <entry key="..\:/Rodrigo y Mario/Cinema/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Rodrigo y Mario/Cinema/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Rodrigo y Mario/Cinema/app/src/main/res/layout/activity_resumen_compra.xml" value="0.1" />
+        <entry key="..\:/Rodrigo y Mario/Cinema/app/src/main/res/layout/activity_signup.xml" value="0.36666666666666664" />
+        <entry key="..\:/Rodrigo y Mario/Cinema/app/src/main/res/layout/cartelera.xml" value="0.36666666666666664" />
+        <entry key="..\:/Rodrigo y Mario/Cinema/app/src/main/res/layout/settings_activity.xml" value="0.36666666666666664" />
+        <entry key="..\:/Rodrigo y Mario/Cinema/app/src/main/res/menu/top_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Rodrigo y Mario/Cinema/app/src/main/res/xml/root_preferences.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

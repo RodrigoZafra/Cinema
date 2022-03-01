@@ -24,7 +24,7 @@
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
 
-    <!--Strings para el control del sonido-->ç
+    <!--Strings para el control del sonido-->
     <string name="activar_sonido">Activar sonido</string>
     <string name="descripcion_activar_sonido_on">Sonido activo</string>
     <string name="descripcion_activar_sonido_off">Sonido inactivo</string>
