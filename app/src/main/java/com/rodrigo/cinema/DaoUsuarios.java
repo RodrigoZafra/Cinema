@@ -15,7 +15,7 @@ public class DaoUsuarios {
     ArrayList<Usuarios> lista;
     SQLiteDatabase sql;
     String bd = "BDUsuarios";
-    String tabla = "create table if not exists usuario(id integer primary key autoincrement,email text,pass text, nombre text,apellido text)";
+    String tabla = "create table if not exists user(id integer primary key autoincrement,nombre text,apellido text, email text,pass text)";
 
     public DaoUsuarios(Context context) {
         this.context = context;
@@ -25,13 +25,13 @@ public class DaoUsuarios {
     }
 
     public boolean insertUsuario(Usuarios u) {
-        if (buscar(u.getEmail()) == 0) {
+        if (buscar(u.getNombre()) == 0) {
             ContentValues cv = new ContentValues();
-            cv.put("email", u.getEmail());
-            cv.put("pass", u.getPassword());
             cv.put("nombre", u.getNombre());
             cv.put("apellido", u.getApellidos());
-            return (sql.insert("usuario", null, cv) > 0);
+            cv.put("email", u.getEmail());
+            cv.put("pass", u.getPassword());
+            return (sql.insert("user", null, cv) > 0);
         } else {
             return false;
         }
@@ -50,15 +50,15 @@ public class DaoUsuarios {
 
     public ArrayList<Usuarios> selectUsuario() {
         ArrayList<Usuarios> lista = new ArrayList<Usuarios>();
-        Cursor cr = sql.rawQuery("select * from usuario", null);
+        Cursor cr = sql.rawQuery("select * from user", null);
         if (cr != null && cr.moveToFirst()) {
             do {
                 Usuarios u = new Usuarios();
                 u.setId(cr.getInt(0));
-                u.setEmail(cr.getString(1));
-                u.setPassword(cr.getString(2));
-                u.setNombre(cr.getString(3));
-                u.setApellidos(cr.getString(4));
+                u.setNombre(cr.getString(1));
+                u.setApellidos(cr.getString(2));
+                u.setEmail(cr.getString(3));
+                u.setPassword(cr.getString(4));
                 lista.add(u);
             } while (cr.moveToNext());
         }
@@ -68,10 +68,10 @@ public class DaoUsuarios {
     //Este metodo verifica si el usuario esta registrado para dejarle logearse
     public int login(String u, String p) {
         int a = 0;
-        Cursor cr = sql.rawQuery("select * from usuario", null);
+        Cursor cr = sql.rawQuery("select * from user", null);
         if (cr != null && cr.moveToFirst()) {
             do {
-                if (cr.getString(1).equals(u) && cr.getString(2).equals(u)) {
+                if (cr.getString(3).equals(u) && cr.getString(4).equals(u)) {
                     a++;
                 }
             } while (cr.moveToNext());

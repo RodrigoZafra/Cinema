@@ -25,7 +25,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_login);
 
         email = findViewById(R.id.edtEmail);
-        pass = findViewById(R.id.edtRegisterPassword);
+        pass = findViewById(R.id.edtPassword);
         btnLogin = findViewById(R.id.buttonLogin);
         btnRegister = findViewById(R.id.buttonRegister);
 
@@ -48,6 +48,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case R.id.buttonLogin:
                 String u = email.getText().toString();
                 String p = pass.getText().toString();
+                System.out.println(email.getText().toString());
+                System.out.println(pass.getText().toString());
                 if (u.equals("") && p.equals("")) {
                     Toast.makeText(this, "Error: Campos vacios", Toast.LENGTH_LONG).show();
                 } else if (dao.login(u, p) == 1) {

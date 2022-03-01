@@ -1,7 +1,6 @@
 package com.rodrigo.cinema;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,8 +26,8 @@ public class SignupActivity extends AppCompatActivity {
 
         email = findViewById(R.id.edtRegisterEmail);
         pass = findViewById(R.id.edtRegisterPassword);
-        nombre = findViewById(R.id.edtNombre);
-        apellidos = findViewById(R.id.edtApellidos);
+        nombre = findViewById(R.id.edtRegisterNombre);
+        apellidos = findViewById(R.id.edtRegisterApellidos);
         dao = new DaoUsuarios(this);
 
         registrar = findViewById(R.id.btnRegistrarse);
@@ -42,6 +41,10 @@ public class SignupActivity extends AppCompatActivity {
                 u.setApellidos(apellidos.getText().toString());
                 u.setEmail(email.getText().toString());
                 u.setPassword(pass.getText().toString());
+                System.out.println(nombre.getText().toString());
+                System.out.println(apellidos.getText().toString());
+                System.out.println(email.getText().toString());
+                System.out.println(pass.getText().toString());
                 if (!u.isNull()) {
                     Toast.makeText(SignupActivity.this, "Error: campos vacios", Toast.LENGTH_LONG).show();
                 } else if (dao.insertUsuario(u)) {

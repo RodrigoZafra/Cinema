@@ -2,7 +2,10 @@ package com.rodrigo.cinema;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class ResumenCompra extends AppCompatActivity {
@@ -22,7 +25,13 @@ public class ResumenCompra extends AppCompatActivity {
         nombreCine.setText(bundle.getString("nombreCine"));
         numeroEntradas.setText(bundle.getString("numEntradas"));
         asientoElegido.setText(bundle.getStringArrayList("arrayAsientos").toString());
-        totalCompra.setText(Integer.parseInt(bundle.getString("numEntradas"))*9 + "€");
+        totalCompra.setText(Integer.parseInt(bundle.getString("numEntradas")) * 9 + "€");
 
+    }
+
+    public void abrirPaypal(View view) {
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse("https://www.paypal.com/signin"));
+        startActivity(i);
     }
 }

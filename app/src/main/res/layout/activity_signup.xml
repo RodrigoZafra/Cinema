@@ -20,7 +20,7 @@
         app:srcCompat="@drawable/boleto_bueno" />
 
     <EditText
-        android:id="@+id/edtNombre"
+        android:id="@+id/edtRegisterNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -34,7 +34,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageViewRegister" />
 
     <EditText
-        android:id="@+id/edtApellidos"
+        android:id="@+id/edtRegisterApellidos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -45,7 +45,7 @@
         android:hint="Apellidos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtNombre" />
+        app:layout_constraintTop_toBottomOf="@+id/edtRegisterNombre" />
 
     <EditText
         android:id="@+id/edtRegisterEmail"
@@ -60,7 +60,7 @@
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtApellidos" />
+        app:layout_constraintTop_toBottomOf="@+id/edtRegisterApellidos" />
 
     <EditText
         android:id="@+id/edtRegisterPassword"

@@ -95,6 +95,7 @@
         android:layout_marginTop="40dp"
         android:layout_marginBottom="24dp"
         android:background="@drawable/button_style"
+        android:onClick="abrirPaypal"
         android:text="Pagar entradas"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
