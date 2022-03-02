@@ -91,10 +91,14 @@ public class FormularioActivity extends AppCompatActivity {
     }
 
     public void comprobarDatos(View view) {
-        if (Integer.parseInt(etNumEntradas.getText().toString()) > 28) {
-            Toast.makeText(this, "El máximo de entradas son 28", Toast.LENGTH_SHORT).show();
-        } else {
-            informacionEntrada(view);
+        try {
+            if (Integer.parseInt(etNumEntradas.getText().toString()) > 28) {
+                Toast.makeText(this, "El máximo de entradas son 28", Toast.LENGTH_SHORT).show();
+            } else {
+                informacionEntrada(view);
+            }
+        } catch (Exception e) {
+            Toast.makeText(this, "Tienes que rellenar los datos requeridos", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -128,6 +132,8 @@ public class FormularioActivity extends AppCompatActivity {
             intent.putExtras(bundle);
             startActivity(intent);
         }
+
+
     }
 }
 
