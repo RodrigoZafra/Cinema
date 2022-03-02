@@ -71,7 +71,7 @@ public class DaoUsuarios {
         Cursor cr = sql.rawQuery("select * from user", null);
         if (cr != null && cr.moveToFirst()) {
             do {
-                if (cr.getString(3).equals(u) && cr.getString(4).equals(u)) {
+                if (cr.getString(3).equals(u) && cr.getString(4).equals(p)) {
                     a++;
                 }
             } while (cr.moveToNext());
